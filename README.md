@@ -1,6 +1,6 @@
 # 하주성
 ## 🌐 Portfolio
-👉 [웹 포트폴리오 바로가기] (leeony-portfolio.vercel.app)
+👉 [웹 포트폴리오 바로가기](leeony-portfolio.vercel.app)
 
 > 다양한 현장에서 쌓은 문제 해결 경험을 바탕으로  
 > Python과 AI 기술을 실제 프로젝트로 구현하고 기록하고 있습니다.
