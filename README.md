@@ -58,11 +58,12 @@ WAV 음악 데이터를 분석하여 **10개 음악 장르를 예측하는 AI �
 
 ## Personal Projects
 
+## 🚀 Personal Projects
+
 | Project | Description | Tech | Status |
 |---|---|---|---|
-| 🎵 **AI Music Genre Classifier** | WAV 기반 10개 음악 장르 분류 | Python · PyTorch · ResNet18 · Streamlit | ✅ 개발 |
-| 🍽️ **Busan Food Map** | 부산 맛집 데이터를 활용한 지도형 프로젝트 | Python · Streamlit · Data | 🔧 정리 중 |
-| 📍 **Busan Restaurant Guide** | 부산 맛집 정보를 탐색하는 Streamlit 프로젝트 | Python · Streamlit | 🔧 정리 중 |
+| 🎵 **AI Music Genre Classifier** | WAV 기반 10개 음악 장르 분류 | Python · PyTorch · ResNet18 · Streamlit | 🟢 개발 중 |
+| 📊 **Mini Project - Classification & Regression** | 분류·회귀 모델 학습 및 성능 개선 미니프로젝트 | Python · PyTorch · Machine Learning | ✅ 완료 |
 
 프로젝트는 기능 구현 이후에도 README, 코드 구조, 실행 결과를 지속적으로 정리하고 있습니다.
 
