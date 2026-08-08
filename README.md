@@ -52,8 +52,9 @@ WAV 음악 데이터를 분석하여 **10개 음악 장르를 예측하는 AI �
 
 [GitHub Repository](https://github.com/leeony2636/ai-music-final)
 
-> Live Demo 링크는 Streamlit 최종 배포 후 연결 예정
+### 🌐 Live Demo
 
+[AI 음악 장르 예측기 실행하기](https://ai-music-final-mj2gmrph3khrrncd5dbsgb.streamlit.app/)
 ---
 
 ## Personal Projects
