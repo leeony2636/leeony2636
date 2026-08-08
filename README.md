@@ -68,6 +68,18 @@ WAV 음악 데이터를 분석하여 **10개 음악 장르를 예측하는 AI �
 프로젝트는 기능 구현 이후에도 README, 코드 구조, 실행 결과를 지속적으로 정리하고 있습니다.
 
 ---
+<br />
+
+## 📚 Paper Research Archive
+
+개발 구현의 기반이 되는 최신 AI/Deep Learning 논문들을 치열하게 읽고 분석하는 공간입니다.
+
+| Category | Description | Status | Link |
+| :--- | :--- | :---: | :---: |
+| 📂 **read-and-chewed** | 완벽히 이해하진 못했지만, 내 방식대로 요약하며 씹어먹는 중인 논문들 | ⏳ *In Progress* | [View Folder](https://github.com) |
+| 🧠 **digested** | 수학적 구조와 코드를 완벽하게 이해하고 소화 완료한 핵심 논문들 | ✅ *Completed* | [View Folder](https://github.com) |
+
+---
 
 ## Learning & Experiments
 
