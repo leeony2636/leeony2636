@@ -77,8 +77,7 @@ WAV 음악 데이터를 분석하여 **10개 음악 장르를 예측하는 AI �
 
 | Category | Description | Status | Link |
 | :--- | :--- | :---: | :---: |
-| 📂 **read-and-chewed** | 완벽히 이해하진 못했지만, 내 방식대로 요약하며 씹어먹는 중인 논문들 | ⏳ *In Progress* | [View Folder](https://github.com) |
-| 🧠 **digested** | 수학적 구조와 코드를 완벽하게 이해하고 소화 완료한 핵심 논문들 | ✅ *Completed* | [View Folder](https://github.com) |
+| 📂 **read-and-chewed** | 완벽히 이해하진 못했지만, 내 방식대로 요약하며 씹어먹는 중인 논문들 | ✅ *Completed* | [View Folder](https://github.com/leeony2636/read-and-chewed) |
 
 ---
 
