@@ -62,8 +62,6 @@ WAV 음악 데이터를 분석하여 **10개 음악 장르를 예측하는 AI �
 [AI 음악 장르 예측기 실행하기](https://ai-music-final-mj2gmrph3khrrncd5dbsgb.streamlit.app/)
 ---
 
-## Personal Projects
-
 ## 🚀 Personal Projects
 
 | Project | Description | Tech | Status |
@@ -192,16 +190,17 @@ Issue → Branch → Pull Request → Merge 흐름을 기록합니다.
 ---
 
 ## Development Roadmap
-
 ```text
-GitHub 운영 기준 적용
+AI / Python 기초 학습
         ↓
-프로젝트 수행 및 기록
+개인 프로젝트 구현
         ↓
-README · 코드 지속 개선
+실험 · 성능 개선 · 문서화
         ↓
-대표 프로젝트 관리
+Streamlit 기반 결과물 배포
         ↓
-실행 가능한 결과물 배포
+논문 및 기술 Research Archive 구축
         ↓
-개발자 포트폴리오 구축
+팀 프로젝트 및 협업 경험 확장
+        ↓
+개발자 포트폴리오 고도화
