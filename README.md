@@ -42,13 +42,18 @@ WAV 음악 데이터를 분석하여 **10개 음악 장르를 예측하는 AI �
 - ResNet18 Fine-tuning
 - Backbone / FC Learning Rate 분리
 - SpecAugment 적용
+- AS-IS / TO-BE 모델 성능 비교
+- Epoch별 학습 과정 시각화
 - Streamlit 웹 애플리케이션 통합
 
 **Result**
 
-- Validation Accuracy: **82.32%**
+- Validation Accuracy: **76.47% → 82.32%**
+- Model Improvement: **+5.85%p**
+- Epoch별 Validation Accuracy / Train Loss / Learning Rate 시각화
 - 6강 기본 → 7강 고급 → 8강 Deep Learning 구조로 기능 확장
 - WAV 업로드 기반 음악 장르 예측 웹 구현
+- Streamlit 배포 완료
 
 [GitHub Repository](https://github.com/leeony2636/ai-music-final)
 
