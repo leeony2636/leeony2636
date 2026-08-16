@@ -1,4 +1,5 @@
 # 하주성
+
 ## 🌐 Portfolio
 👉 [웹 포트폴리오 바로가기][![Portfolio](https://img.shields.io/badge/Portfolio-Open-blue?style=for-the-badge)](https://leeony-portfolio.vercel.app)
 
@@ -10,7 +11,7 @@
 ## About Me
 
 병원, 철강 가공, 특수용접 등 서로 다른 현장에서 문제를 직접 해결해 온 경험을 바탕으로  
-현재 Python · AI · Deep Learning 기술을 활용한 개인 프로젝트를 개발하고 있습니다.
+현재 Python · AI · Deep Learning 기술을 활용한 개인 및 팀 프로젝트를 개발하고 있습니다.
 
 결과만 남기는 것이 아니라 **실험 → 개선 → 문서화 → 배포** 과정을 GitHub에 기록하며  
 프로젝트의 완성도를 지속적으로 높여가는 것을 목표로 하고 있습니다.
@@ -60,6 +61,43 @@ WAV 음악 데이터를 분석하여 **10개 음악 장르를 예측하는 AI �
 ### 🌐 Live Demo
 
 [AI 음악 장르 예측기 실행하기](https://ai-music-final-mj2gmrph3khrrncd5dbsgb.streamlit.app/)
+
+---
+
+### 👨‍🍳 ChefEar — AI Voice Cooking Assistant
+
+음성 기반으로 레시피를 검색하고, 조리 단계를 진행하며, 재료 변경까지 반영할 수 있도록 설계한 **팀 프로젝트**
+
+`Python` `PyTorch` `Whisper` `wav2vec2` `QLoRA` `Qwen3-TTS` `Streamlit` `Supabase`
+
+**My Role — STT Fine-tuning**
+
+- Whisper Small 기반 초기 STT 실험
+- wav2vec2 비교 실험 및 성능 검증
+- `openai/whisper-large-v3-turbo` QLoRA 파인튜닝
+- Fixed100 / New500 기준 WER · CER 평가
+- 모델 비교를 통한 최종 STT 모델 선정
+- TTS 생성 음성 → STT 재인식 통합 테스트 진행
+- Git Branch / Pull Request / Review 기반 협업
+- STT 관련 README 및 실험 과정 문서화
+
+**Current Result**
+
+- Whisper Small / wav2vec2 / Whisper Large 비교 실험 완료
+- Whisper Large-v3-turbo를 ChefEar 최종 STT 모델로 선정
+- 요리명, 재료명, 숫자, 계량단위, 조리 행동 표현 중심으로 검증
+- STT 모델과 팀 서비스 통합 작업 진행 중
+
+[GitHub Repository](https://github.com/aihuman-7th/proj1-a)
+
+---
+
+## 🤝 Team Projects
+
+| Project | Role | Tech | Status |
+|---|---|---|---|
+| 👨‍🍳 **ChefEar** | STT Fine-tuning | Whisper · wav2vec2 · QLoRA · Streamlit | 🚧 In Progress |
+
 ---
 
 ## 🚀 Personal Projects
@@ -72,6 +110,7 @@ WAV 음악 데이터를 분석하여 **10개 음악 장르를 예측하는 AI �
 프로젝트는 기능 구현 이후에도 README, 코드 구조, 실행 결과를 지속적으로 정리하고 있습니다.
 
 ---
+
 <br />
 
 ## 📚 Paper Research Archive
@@ -112,6 +151,11 @@ WAV 음악 데이터를 분석하여 **10개 음악 장르를 예측하는 AI �
 - 음악 장르 분류
 - TTS 관련 실습
 - Audio Feature Extraction
+- Whisper STT Fine-tuning
+- wav2vec2 비교 실험
+- QLoRA 기반 STT 모델 학습
+- WER / CER 기반 음성인식 모델 평가
+- STT / TTS 통합 테스트
 
 ### Data / Machine Learning
 
@@ -135,7 +179,11 @@ WAV 음악 데이터를 분석하여 **10개 음악 장르를 예측하는 AI �
 
 ### Audio AI
 
-`Librosa` `Mel Spectrogram`
+`Librosa` `Mel Spectrogram` `Whisper` `wav2vec2` `Qwen3-TTS`
+
+### Model Training
+
+`Fine-tuning` `QLoRA` `WER` `CER`
 
 ### Visualization & App
 
@@ -190,6 +238,7 @@ Issue → Branch → Pull Request → Merge 흐름을 기록합니다.
 ---
 
 ## Development Roadmap
+
 ```text
 AI / Python 기초 학습
         ↓
