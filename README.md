@@ -1,7 +1,8 @@
 # 하주성
 
 ## 🌐 Portfolio
-👉 [웹 포트폴리오 바로가기][![Portfolio](https://img.shields.io/badge/Portfolio-Open-blue?style=for-the-badge)](https://leeony-portfolio.vercel.app)
+
+👉 [웹 포트폴리오 바로가기](https://leeony-portfolio.vercel.app/)
 
 > 다양한 현장에서 쌓은 문제 해결 경험을 바탕으로  
 > Python과 AI 기술을 실제 프로젝트로 구현하고 기록하고 있습니다.
@@ -78,17 +79,21 @@ WAV 음악 데이터를 분석하여 **10개 음악 장르를 예측하는 AI �
 - Fixed100 / New500 기준 WER · CER 평가
 - 모델 비교를 통한 최종 STT 모델 선정
 - TTS 생성 음성 → STT 재인식 통합 테스트 진행
+- GPU 기반 STT 추론 구조 정리
 - Git Branch / Pull Request / Review 기반 협업
 - STT 관련 README 및 실험 과정 문서화
 
 **Current Result**
 
-- Whisper Small / wav2vec2 / Whisper Large 비교 실험 완료
-- Whisper Large-v3-turbo를 ChefEar 최종 STT 모델로 선정
+- Whisper Small / wav2vec2 / Whisper Large-v3-turbo 비교 실험 완료
+- Whisper Large-v3-turbo 기반 QLoRA 파인튜닝 및 최종 STT 모델 선정
+- Fixed100 / New500 기준 WER·CER 평가 완료
 - 요리명, 재료명, 숫자, 계량단위, 조리 행동 표현 중심으로 검증
-- STT 모델과 팀 서비스 통합 작업 진행 중
+- TTS 생성 음성 → STT 재인식 통합 테스트 수행
+- Hugging Face 비공개 모델 호출 방식으로 실행 구조 정리
+- STT 추론·평가·실험 결과를 개인 저장소에 문서화
 
-[GitHub Repository](https://github.com/aihuman-7th/proj1-a)
+[개인 STT 기록 Repository](https://github.com/leeony2636/Chefear)
 
 ---
 
@@ -96,7 +101,7 @@ WAV 음악 데이터를 분석하여 **10개 음악 장르를 예측하는 AI �
 
 | Project | Role | Tech | Status |
 |---|---|---|---|
-| 👨‍🍳 **ChefEar** | STT Fine-tuning | Whisper · wav2vec2 · QLoRA · Streamlit | 🚧 In Progress |
+| 👨‍🍳 **ChefEar** | STT Fine-tuning | Whisper · wav2vec2 · QLoRA · Streamlit | ✅ Completed |
 
 ---
 
@@ -104,22 +109,20 @@ WAV 음악 데이터를 분석하여 **10개 음악 장르를 예측하는 AI �
 
 | Project | Description | Tech | Status |
 |---|---|---|---|
-| 🎵 **AI Music Genre Classifier** | WAV 기반 10개 음악 장르 분류 | Python · PyTorch · ResNet18 · Streamlit |✅|
-| 📊 **Mini Project - Classification & Regression** | 분류·회귀 모델 학습 및 성능 개선 미니프로젝트 | Python · PyTorch · Machine Learning |✅|
+| 🎵 **AI Music Genre Classifier** | WAV 기반 10개 음악 장르 분류 | Python · PyTorch · ResNet18 · Streamlit | ✅ |
+| 📊 **Mini Project - Classification & Regression** | 분류·회귀 모델 학습 및 성능 개선 미니프로젝트 | Python · PyTorch · Machine Learning | ✅ |
 
 프로젝트는 기능 구현 이후에도 README, 코드 구조, 실행 결과를 지속적으로 정리하고 있습니다.
 
 ---
 
-<br />
-
 ## 📚 Paper Research Archive
 
-개발 구현의 기반이 되는 최신 AI/Deep Learning 논문들을 치열하게 읽고 분석하는 공간입니다.
+개발 구현의 기반이 되는 최신 AI/Deep Learning 논문들을 읽고 분석하는 공간입니다.
 
 | Category | Description | Status | Link |
-| :--- | :--- | :---: | :---: |
-| 📂 **read_and_chewed** | 완벽히 이해하진 못했지만, 내 방식대로 요약하며 씹어먹는 중인 논문들 | ✅ *Completed* | [View Folder](https://github.com/leeony2636/read_and_chewed) |
+|---|---|:---:|---|
+| 📂 **read_and_chewed** | 논문 내용을 직접 요약하고 정리하는 Research Archive | ✅ Completed | [View Folder](https://github.com/leeony2636/read_and_chewed) |
 
 ---
 
@@ -239,17 +242,16 @@ Issue → Branch → Pull Request → Merge 흐름을 기록합니다.
 
 ## Development Roadmap
 
-```text
-AI / Python 기초 학습
-        ↓
-개인 프로젝트 구현
-        ↓
-실험 · 성능 개선 · 문서화
-        ↓
-Streamlit 기반 결과물 배포
-        ↓
-논문 및 기술 Research Archive 구축
-        ↓
-팀 프로젝트 및 협업 경험 확장
-        ↓
+AI / Python 기초 학습  
+↓  
+개인 프로젝트 구현  
+↓  
+실험 · 성능 개선 · 문서화  
+↓  
+Streamlit 기반 결과물 배포  
+↓  
+논문 및 기술 Research Archive 구축  
+↓  
+팀 프로젝트 및 협업 경험 확장  
+↓  
 개발자 포트폴리오 고도화
