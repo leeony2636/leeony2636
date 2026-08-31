@@ -67,41 +67,38 @@ WAV 음악 데이터를 분석하여 **10개 음악 장르를 예측하는 AI �
 
 ### 👨‍🍳 ChefEar — AI Voice Cooking Assistant
 
-음성 기반으로 레시피를 검색하고, 조리 단계를 진행하며, 재료 변경까지 반영할 수 있도록 설계한 **팀 프로젝트**
+음성으로 레시피를 검색하고 조리 단계를 진행할 수 있도록 설계한 팀 프로젝트입니다.
 
-`Python` `PyTorch` `Whisper` `wav2vec2` `QLoRA` `Qwen3-TTS` `Streamlit` `Supabase`
+`Python` `PyTorch` `Whisper` `wav2vec2` `QLoRA` `Streamlit` `Supabase`
 
 **My Role — STT Fine-tuning**
 
-- Whisper Small 기반 초기 STT 실험
-- wav2vec2 비교 실험 및 성능 검증
-- `openai/whisper-large-v3-turbo` QLoRA 파인튜닝
-- Fixed100 / New500 기준 WER · CER 평가
-- 모델 비교를 통한 최종 STT 모델 선정
-- TTS 생성 음성 → STT 재인식 통합 테스트 진행
-- GPU 기반 STT 추론 구조 정리
-- Git Branch / Pull Request / Review 기반 협업
-- STT 관련 README 및 실험 과정 문서화
+- Whisper Small, wav2vec2, Whisper Large-v3-turbo 비교
+- Whisper Large-v3-turbo 기반 QLoRA 파인튜닝
+- 요리명·재료명·수량·단위·조리동작 중심의 음성 인식 평가
+- Fixed100 / New500 기준 WER·CER 비교
+- 최종 STT 모델 선정 및 팀 서비스 통합 테스트
+- CTranslate2 int8 및 faster-whisper 기반 추론 구조 검증
+- STT 개발 과정과 평가 결과 문서화
 
-**Current Result**
+**Result**
 
-- Whisper Small / wav2vec2 / Whisper Large-v3-turbo 비교 실험 완료
-- Whisper Large-v3-turbo 기반 QLoRA 파인튜닝 및 최종 STT 모델 선정
-- Fixed100 / New500 기준 WER·CER 평가 완료
-- 요리명, 재료명, 숫자, 계량단위, 조리 행동 표현 중심으로 검증
-- TTS 생성 음성 → STT 재인식 통합 테스트 수행
-- Hugging Face 비공개 모델 호출 방식으로 실행 구조 정리
-- STT 추론·평가·실험 결과를 개인 저장소에 문서화
+- Whisper Large-v3-turbo 기반 최종 STT 모델 선정
+- Fixed100 WER **7.68%**, CER **1.44%**
+- New500 WER **10.72%**, CER **2.26%**
+- 팀 GPU 환경에서 실시간 추론 구조 검증
+- 개인 STT 개발 과정과 평가 결과를 별도 Repository에 정리
+
+TTS 모델 개발과 학습은 팀 프로젝트의 별도 담당 영역이며, 본인은 TTS 출력 음성을 STT 평가에 활용하는 통합 테스트를 진행했습니다.
 
 [개인 STT 기록 Repository](https://github.com/leeony2636/Chefear)
-
 ---
 
 ## 🤝 Team Projects
 
 | Project | Role | Tech | Status |
 |---|---|---|---|
-| 👨‍🍳 **ChefEar** | STT Fine-tuning | Whisper · wav2vec2 · QLoRA · Streamlit | ✅ Completed |
+| 👨‍🍳 **ChefEar** | STT Model Development & Integration | Whisper · QLoRA · Streamlit | ✅ Completed |
 
 ---
 
