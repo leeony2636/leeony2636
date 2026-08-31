@@ -92,6 +92,7 @@ WAV 음악 데이터를 분석하여 **10개 음악 장르를 예측하는 AI �
 TTS 모델 개발과 학습은 팀 프로젝트의 별도 담당 영역이며, 본인은 TTS 출력 음성을 STT 평가에 활용하는 통합 테스트를 진행했습니다.
 
 [개인 STT 기록 Repository](https://github.com/leeony2636/Chefear)
+
 ---
 
 ## 🤝 Team Projects
