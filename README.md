@@ -150,7 +150,7 @@ TTS 모델 개발과 학습은 팀 프로젝트의 별도 담당 영역이며, �
 - 음성 데이터 처리
 - Mel Spectrogram
 - 음악 장르 분류
-- TTS 관련 실습
+- 팀 프로젝트 TTS 연동 참고
 - Audio Feature Extraction
 - Whisper STT Fine-tuning
 - wav2vec2 비교 실험
@@ -180,7 +180,7 @@ TTS 모델 개발과 학습은 팀 프로젝트의 별도 담당 영역이며, �
 
 ### Audio AI
 
-`Librosa` `Mel Spectrogram` `Whisper` `wav2vec2` `Qwen3-TTS`
+`Librosa` `Mel Spectrogram` `Whisper` `wav2vec2`
 
 ### Model Training
 
