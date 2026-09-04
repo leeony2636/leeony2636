@@ -109,6 +109,7 @@ TTS 모델 개발과 학습은 팀 프로젝트의 별도 담당 영역이며, �
 | Project | Description | Tech | Status |
 |---|---|---|---|
 | 🎵 **AI Music Genre Classifier** | WAV 기반 10개 음악 장르 분류 | Python · PyTorch · ResNet18 · Streamlit | ✅ |
+| 🐳 **Docker FastAPI Sentiment API** | Docker 기반 감정분석 API 구현 실습 | Python · FastAPI · Docker · Hugging Face | ✅ |
 | 📊 **Mini Project - Classification & Regression** | 분류·회귀 모델 학습 및 성능 개선 미니프로젝트 | Python · PyTorch · Machine Learning | ✅ |
 
 프로젝트는 기능 구현 이후에도 README, 코드 구조, 실행 결과를 지속적으로 정리하고 있습니다.
