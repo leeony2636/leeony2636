@@ -12,10 +12,11 @@
 ## About Me
 
 Python과 AI·Deep Learning을 공부하며
-문제를 실제 서비스와 프로젝트로 구현하는 개발자입니다.
+음성 인식, 머신러닝, LLM Agent를 실제 서비스와 프로젝트로 구현하는 개발자입니다.
 
 다양한 현장 경험을 통해 문제를 발견하고 해결해 온 방식에 익숙하며,
 이 경험을 바탕으로 데이터와 AI를 활용한 프로젝트를 개발하고 있습니다.
+최근에는 MCP 기반 운영 보조 Agent와 문서 검색을 활용한 RAG 챗봇으로 개발 경험을 확장하고 있습니다.
 
 아이디어를 결과물로 끝내지 않고
 실험 → 개선 → 문서화 → 배포까지 이어지는 과정을 중요하게 생각합니다.
@@ -43,9 +44,9 @@ WAV 음악 데이터를 분석하여 **10개 음악 장르를 예측하는 AI �
 - 장르별 신뢰도 시각화
 - 여러 WAV 파일 비교 기능 구현
 - 예측 이력 기능 추가
-- 3초 Segment 기반 학습 데이터 확장
-- ResNet18 Fine-tuning
-- Backbone / FC Learning Rate 분리
+- 3초 Segment 기반 Mel-Spectrogram 변환
+- ImageNet 사전학습 ResNet18 Fine-tuning
+- 데이터 증강 및 하이퍼파라미터 조정
 - SpecAugment 적용
 - AS-IS / TO-BE 모델 성능 비교
 - Epoch별 학습 과정 시각화
@@ -57,7 +58,7 @@ WAV 음악 데이터를 분석하여 **10개 음악 장르를 예측하는 AI �
 - Model Improvement: **+5.85%p**
 - Epoch별 Validation Accuracy / Train Loss / Learning Rate 시각화
 - 6강 기본 → 7강 고급 → 8강 Deep Learning 구조로 기능 확장
-- WAV 업로드 기반 음악 장르 예측 웹 구현
+- 3초 구간별 예측을 평균하는 WAV 업로드 기반 음악 장르 예측 웹 구현
 - Streamlit 배포 완료
 
 ---
@@ -76,11 +77,13 @@ GitHub 프로젝트를 **Qwen · Command A · Gemini 세 AI 모델이 독립적�
 - 세 모델의 독립적인 1차 프로젝트 분석
 - 모델 간 Cross Review 및 Consensus 검증
 - 최소 2개 모델이 동의한 항목만 최종 결과로 채택
-- 최신 `main.py`와 `README.md` 중심의 핵심 프로젝트 리뷰
+- 최신 `main.py`와 `README.md`, 최근 7일 변경 메타데이터 중심의 핵심 프로젝트 리뷰
+- 실제 Git diff의 변경 파일·라인·코드 근거 검증
+- 특정 Pull Request를 대상으로 하는 PR Cross Review
 - 무료 API 환경을 고려한 입력 크기 및 모델 호출 제한
 - Quota Guard 기반 API 사용량 보호
 - 모델별 1차 의견과 교차검증 결과 보존
-- GitHub Actions 기반 주간 자동 리뷰 실행
+- GitHub Actions 기반 매주 월요일 오전 9시(KST) 주간 자동 리뷰 구성
 - 리뷰 결과를 GitHub Issue로 자동 생성
 - JSON / SQLite 기반 실행 기록 저장
 
@@ -90,7 +93,8 @@ GitHub 프로젝트를 **Qwen · Command A · Gemini 세 AI 모델이 독립적�
 - 독립 분석 → 교차검증 → Consensus 구조 구현
 - 프로젝트 핵심 파일 중심의 토큰 절약형 리뷰 방식 적용
 - 모델별 의견 / 교차검증 / 최종 종합 결과를 GitHub Issue에서 확인 가능
-- GitHub Actions 기반 주간 프로젝트 상태 점검 자동화 완료
+- GitHub Actions 기반 주간 리뷰와 PR 교차검증 워크플로우 구성
+- 검토 범위와 모델 실행 성공·실패 상태를 결과에 함께 기록
 
 ---
 
@@ -100,7 +104,7 @@ FastAPI를 기반으로 **감정분석 · AI 채팅 · 이미지 설명 기능�
 
 [GitHub Repository](https://github.com/leeony2636/docker-fastapi-sentiment-api)
 
-`Python` `FastAPI` `Docker` `Hugging Face` `OpenRouter` `Qwen`
+`Python` `FastAPI` `Docker` `Pydantic` `HTTPX` `Hugging Face` `OpenRouter`
 
 **Development**
 
@@ -111,6 +115,7 @@ FastAPI를 기반으로 **감정분석 · AI 채팅 · 이미지 설명 기능�
 - `/predict` · `/chat` · `/describe-image` 엔드포인트 구성
 - 기능별 Router 분리를 통한 코드 구조 개선
 - 환경변수를 이용한 API Key 및 Token 관리
+- Pydantic 기반 요청 데이터 검증과 채팅 입력 길이 제한
 - Swagger `/docs` 기반 API 테스트
 - Docker 기반 실행 환경 구성
 
@@ -119,7 +124,7 @@ FastAPI를 기반으로 **감정분석 · AI 채팅 · 이미지 설명 기능�
 - 감정분석 · AI 채팅 · 이미지 분석 3개 기능 통합
 - Hugging Face Inference API 연동 완료
 - OpenRouter AI 모델 연동 완료
-- FastAPI Swagger에서 전체 API 정상 동작 확인
+- Swagger 기반 API 테스트와 감정분석 HTTP 200 응답 결과 기록
 - 기존 감정분석 API를 Multi-AI API 프로젝트로 확장
 
 ---
@@ -128,9 +133,9 @@ FastAPI를 기반으로 **감정분석 · AI 채팅 · 이미지 설명 기능�
 
 음성으로 레시피를 검색하고 조리 단계를 진행할 수 있도록 설계한 팀 프로젝트입니다.
 
-[개인 STT 기록 Repository](https://github.com/leeony2636/Chefear)
+[개인 STT 기록 Repository](https://github.com/leeony2636/Chefear-stt)
 
-`Python` `PyTorch` `Whisper` `wav2vec2` `QLoRA` `Streamlit` `Supabase`
+`Python` `PyTorch` `Whisper` `wav2vec2` `QLoRA` `CTranslate2` `faster-whisper`
 
 **My Role — STT Fine-tuning**
 
@@ -138,6 +143,7 @@ FastAPI를 기반으로 **감정분석 · AI 채팅 · 이미지 설명 기능�
 - Whisper Large-v3-turbo 기반 QLoRA 파인튜닝
 - 요리명·재료명·수량·단위·조리동작 중심의 음성 인식 평가
 - Fixed100 / New500 기준 WER·CER 비교
+- 숫자·수량·단위 취약유형 분석 및 데이터 보강
 - 최종 STT 모델 선정 및 팀 서비스 통합 테스트
 - CTranslate2 int8 및 faster-whisper 기반 추론 구조 검증
 - STT 개발 과정과 평가 결과 문서화
@@ -147,6 +153,7 @@ FastAPI를 기반으로 **감정분석 · AI 채팅 · 이미지 설명 기능�
 - Whisper Large-v3-turbo 기반 최종 STT 모델 선정
 - Fixed100 WER **7.68%**, CER **1.44%**
 - New500 WER **10.72%**, CER **2.26%**
+- 요리 도메인 핵심정보 종합 성공률 **96.23%**
 - 팀 GPU 환경에서 실시간 추론 구조 검증
 - 개인 STT 개발 과정과 평가 결과를 별도 Repository에 정리
 
@@ -158,7 +165,8 @@ TTS 모델 개발과 학습은 팀 프로젝트의 별도 담당 영역이며, �
 
 | Project | Role | Tech | Status |
 |---|---|---|---|
-| 👨‍🍳 **ChefEar** | STT Model Development & Integration | Whisper · QLoRA · Streamlit | ✅ Completed |
+| 👨‍🍳 **[ChefEar](https://github.com/leeony2636/Chefear-stt)** | STT 모델 개발·평가·경량화·팀 통합 테스트 | Whisper · QLoRA · CTranslate2 · faster-whisper | ✅ STT 개발·팀 GPU 추론 검증 |
+| 🧩 **[방탈출 카페 운영 보조 Agent](https://github.com/leeony2636/proj2-1_leeony)** | 팀 프로젝트 참여 | FastAPI · MCP · React · TypeScript · OpenRouter | 🚧 개발 중·모델 평가 준비 |
 
 ---
 
@@ -166,22 +174,27 @@ TTS 모델 개발과 학습은 팀 프로젝트의 별도 담당 영역이며, �
 
 | Project | Description | Tech | Status |
 |---|---|---|---|
-| 🎵 **AI Music Genre Classifier** | WAV 기반 10개 음악 장르 분류 | Python · PyTorch · ResNet18 · Streamlit | ✅ |
-| 🤖 **GitHub Weekly Three-Model Project Reviewer** | Qwen · Command A · Gemini 기반 주간 프로젝트 교차검증 자동화 | Python · GitHub Actions · Multi-AI · SQLite | ✅ |
-| 🐳 **Docker FastAPI Multi-AI API** | 감정분석 · AI 채팅 · 이미지 설명 기능을 통합한 FastAPI 서버 | Python · FastAPI · Docker · Hugging Face · OpenRouter | ✅ |
-| 📊 **Mini Project - Classification & Regression** | 분류·회귀 모델 학습 및 성능 개선 미니프로젝트 | Python · PyTorch · Machine Learning | ✅ |
+| 🎵 **[AI Music Genre Classifier](https://github.com/leeony2636/ai-music-final)** | WAV 기반 10개 음악 장르 분류 | Python · PyTorch · ResNet18 · Streamlit | ✅ 모델 개선·Streamlit 배포 |
+| 🤖 **[GitHub Weekly Three-Model Project Reviewer](https://github.com/leeony2636/github-weekly-project-reviewer)** | 세 모델 독립 분석·교차검증, 주간 리뷰·PR 리뷰 | Python · GitHub Actions · Multi-AI · SQLite | ✅ 리뷰 워크플로우 구성 |
+| 🐳 **[Docker FastAPI Multi-AI API](https://github.com/leeony2636/docker-fastapi-sentiment-api)** | 감정분석·AI 채팅·이미지 설명 API | Python · FastAPI · Docker · Hugging Face · OpenRouter | ✅ API 구현·Docker 실행 |
+| 📊 **[Mini Project - Classification & Regression](https://github.com/leeony2636/Miniproject)** | MNIST CNN 분류·자전거 수요 MLP 회귀·통합 Showcase | Python · PyTorch · Streamlit | ✅ 분류·회귀 앱 통합 |
+| 📰 **[AI Hot News + 정책 RAG 챗봇](https://github.com/leeony2636/ai-hot-news-rag-agent)** | AI 뉴스 수집·요약, 한국·미국 정책 PDF 검색·비교 | n8n · OpenRouter · Google Sheets · Ollama · RAG | ✅ 뉴스·정책 챗봇 워크플로우 구성 |
+| 🌐 **[AI Portfolio & Chatbot](https://github.com/leeony2636/leeony-portfolio)** | 반응형 포트폴리오·프로젝트 상세 화면·멀티턴 AI 챗봇 | React · TypeScript · Vite · Vercel · OpenRouter | ✅ 웹 배포·챗봇 연동 |
+| 🗺️ **[부산 맛집 데이터 가이드](https://github.com/leeony2636/busan-restaurant-guide)** | 부산 16개 구·군·음식 종류 필터와 지도 탐색 | Python · Pandas · Streamlit · Folium | ✅ 지도·필터 UI 구현 |
 
 프로젝트는 기능 구현 이후에도 README, 코드 구조, 실행 결과를 지속적으로 정리하고 있습니다.
+상태는 각 저장소 README에 기록된 구현·실험·배포 단계를 기준으로 구분합니다.
 
 ---
 
 ## 📚 Paper Research Archive
 
-개발 구현의 기반이 되는 최신 AI/Deep Learning 논문들을 읽고 분석하는 공간입니다.
+개발 구현의 기반이 되는 AI/Deep Learning 논문들을 읽고 분석하는 공간입니다.
+Transformer·BERT·LoRA·QLoRA·모델 경량화·Whisper 등 16개 주제의 정리 노트를 기록하고 있습니다.
 
 | Category | Description | Status | Link |
 |---|---|:---:|---|
-| 📂 **read_and_chewed** | 논문 내용을 직접 요약하고 정리하는 Research Archive | ✅ Completed | [View Folder](https://github.com/leeony2636/read_and_chewed) |
+| 📂 **read_and_chewed** | 직관적 비유·시각적 도해·6단계 분석으로 정리한 AI 논문 아카이브 | 📚 16개 주제 정리·지속 확장 | [View Folder](https://github.com/leeony2636/read_and_chewed) |
 
 ---
 
@@ -205,6 +218,8 @@ TTS 모델 개발과 학습은 팀 프로젝트의 별도 담당 영역이며, �
 - 문장 Embedding
 - 유사도 기반 검색
 - Top-K 검색
+- Ollama 임베딩과 Simple Vector Store를 활용한 정책 PDF RAG
+- 검색 결과를 활용한 한국·미국 AI 정책 비교
 
 ### Voice / Audio AI
 
@@ -226,6 +241,9 @@ TTS 모델 개발과 학습은 팀 프로젝트의 별도 담당 영역이며, �
 - Scikit-learn
 - 데이터 시각화
 - 모델 성능 비교 및 실험
+- MNIST CNN 분류·자전거 수요 MLP 회귀
+- 데이터 표준화와 학습 모델의 Streamlit 앱 통합
+- 지역·음식 종류 필터와 Folium 지도 시각화
 
 ### Backend / API
 
@@ -236,6 +254,10 @@ TTS 모델 개발과 학습은 팀 프로젝트의 별도 담당 영역이며, �
 - 환경변수 기반 API Key 관리
 - Swagger API 테스트
 - Docker 실행 환경 구성
+- MCP를 활용한 운영 보조 Agent의 권한·동의 경계
+- React·TypeScript·Vite 기반 포트폴리오
+- Vercel Serverless Function 기반 AI 챗봇 API
+- 대화 이력을 포함한 멀티턴 챗봇
 
 ### AI Automation
 
@@ -246,6 +268,10 @@ TTS 모델 개발과 학습은 팀 프로젝트의 별도 담당 영역이며, �
 - API Quota Guard
 - GitHub Issue 자동 생성
 - SQLite 실행 기록 관리
+- 실제 diff·변경 라인·코드 근거 검증
+- Pull Request 대상 교차검증
+- n8n 기반 RSS 수집·AI 요약·뉴스 챗봇
+- Google Sheets와 문서 검색 도구를 연결한 자동화
 
 ---
 
@@ -253,15 +279,15 @@ TTS 모델 개발과 학습은 팀 프로젝트의 별도 담당 영역이며, �
 
 ### Language & Data
 
-`Python` `Pandas` `NumPy`
+`Python` `TypeScript` `JavaScript` `Pandas` `NumPy`
 
 ### AI / Machine Learning
 
-`PyTorch` `Scikit-learn` `ResNet18`
+`PyTorch` `Scikit-learn` `CNN` `MLP` `ResNet18`
 
 ### Audio AI
 
-`Librosa` `Mel Spectrogram` `Whisper` `wav2vec2`
+`Librosa` `Mel Spectrogram` `Whisper` `wav2vec2` `CTranslate2` `faster-whisper`
 
 ### Model Training
 
@@ -269,19 +295,19 @@ TTS 모델 개발과 학습은 팀 프로젝트의 별도 담당 영역이며, �
 
 ### Visualization & App
 
-`Matplotlib` `Streamlit`
+`Matplotlib` `Streamlit` `Folium` `React` `Vite`
 
 ### Backend & API
 
-`FastAPI` `REST API` `Docker` `OpenRouter` `Hugging Face API`
+`FastAPI` `Pydantic` `HTTPX` `REST API` `MCP` `Docker` `OpenRouter` `Hugging Face API` `Vercel Serverless Functions`
 
 ### AI Automation
 
-`GitHub Actions` `Qwen` `Command A` `Gemini` `Multi-Agent Cross Review`
+`GitHub Actions` `n8n` `Google Sheets` `Qwen` `Command A` `Gemini` `Multi-Agent Cross Review` `SQLite` `Ollama` `RAG`
 
 ### Development
 
-`VS Code` `Google Colab` `Git` `GitHub` `GitHub Actions` `Docker`
+`VS Code` `Google Colab` `Git` `GitHub` `GitHub Actions` `Docker` `Vercel`
 
 ---
 
@@ -320,6 +346,8 @@ GitHub 운영 원칙을 적용하고 있습니다.
 - `fix` — 오류 수정
 - `docs` — 문서 수정
 
+팀 프로젝트에서는 팀별 규칙을 따르며, 방탈출 프로젝트는 작성자 성명 이니셜 + 생성 순번으로 작업 브랜치를 구분합니다.
+
 ### Issue / Pull Request
 
 프로젝트 작업 및 협업 과정에서  
@@ -330,8 +358,11 @@ Issue → Branch → Pull Request → Merge 흐름을 기록합니다.
 프로젝트 상태를 정기적으로 점검하기 위해  
 Qwen · Command A · Gemini 기반의 주간 Multi-AI Review 시스템을 운영하고 있습니다.
 
-세 모델이 독립적으로 프로젝트를 검토한 뒤 서로의 의견을 교차검증하고,  
-최종 결과를 GitHub Issue로 자동 기록합니다.
+세 모델이 최신 핵심 파일과 최근 변경사항을 독립적으로 검토한 뒤,  
+실제 코드 근거를 확인하고 서로의 의견을 교차검증합니다.
+
+서로 다른 모델 중 최소 2개가 동의한 항목을 최종 결과로 채택하며,  
+모델별 의견·실행 상태·교차검증 결과를 GitHub Issue와 JSON·SQLite 기록으로 남깁니다.
 
 ---
 
@@ -345,12 +376,12 @@ AI / Python 기초 학습
 ↓  
 Streamlit 기반 AI 결과물 배포  
 ↓  
-FastAPI 기반 AI API 서비스 구현  
+FastAPI · Docker · MCP 기반 AI API 및 운영 보조 Agent 구현  
 ↓  
-GitHub Actions 기반 Multi-AI 자동 리뷰 시스템 구축  
+GitHub Actions · n8n 기반 Multi-AI 리뷰 및 뉴스·정책 RAG 워크플로우 구축  
 ↓  
 논문 및 기술 Research Archive 구축  
 ↓  
-팀 프로젝트 및 협업 경험 확장  
+STT 개발·팀 통합 테스트 및 운영 보조 Agent 협업 경험 확장  
 ↓  
-개발자 포트폴리오 고도화
+React · TypeScript · Vercel 기반 포트폴리오 및 멀티턴 AI 챗봇 고도화
